@@ -7,11 +7,9 @@ function setup() {
 }
 
 function diffPolynom(){
-    let polynom = document.getElementById('polynom_input');
-    let diff_variable = document.getElementById('diff_variable_input');
-    const my_minimaple = new MiniMaple('4*x^3 - x^-2','-x');
-    let mon = my_minimaple.GetArrayMononoms();
-    document.getElementById('result_output').innerHTML = mon[1];
-    
-    //parseFloat('-x^-2'.split('').reverse().join('')).toString().split('').reverse().join('');
+    let polynom = document.getElementById('polynom_input').value;
+    let diff_variable = document.getElementById('diff_variable_input').value;
+    let my_minimaple = new MiniMaple(polynom,diff_variable);
+    let res = my_minimaple.diff();
+    document.getElementById('result_output').innerHTML = res;
 }
