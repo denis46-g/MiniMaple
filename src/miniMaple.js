@@ -4,41 +4,6 @@ class MiniMaple{
         this._diff_variable = diff_variable;
     }
     diff(){
-        /*arr_coef = this._coefficients.split(' ');
-        arr_var = this._variables.split(' ');
-        if(arr_coef.length == 0)
-            return "non";
-        else if(arr_coef.length != arr_var.length)
-            return "Ошибка. Неправильно задан многочлен : число коэффициентов не равно числу переменных при этих коэффициентах.";
-        else if (this._diff_variable.length != 1)
-            return "Ошибка. Переменная, по которой дифференцируем, должна быть записана одной буквой.";
-        else{
-            result = "";
-            let i = 0;
-            while(i<arr_var.length){
-                if(arr_var[i].length > 1)
-                    return "Ошибка. Каждый одночлен может состоять из одной переменной";
-                else{
-                    let mononom="";
-                    if(arr_var[i]==this._diff_variable)
-                    {
-                        mononom = (parseFloat(arr_coef[i])*(arr_var.length-1-i)).toString();
-                        if(mononom!="0"){
-                            if(parseFloat(mononom)>0){
-                                if(mononom.length==0)
-                                    mononom+=this._diff_variable+(arr_var.length-1-i).toString();
-                                else
-                                    mononom+=this._diff_variable+(arr_var.length-1-i).toString();
-                                result += mononom + " ";
-                            }
-                            else
-                                mononom+="-" + this._diff_variable+(arr_var.length-1-i).toString();
-                        }
-                    }
-                }
-                i++;
-            }
-            return result;*/
         if(this._polynom == undefined || this._polynom.replaceAll(' ','').length == 0)
             return "non";
         if (this._diff_variable == undefined || this._diff_variable.replaceAll(' ','').length != 1)
